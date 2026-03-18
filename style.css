@@ -266,17 +266,41 @@ a {
 /* Spline 3D Canvas Background */
 .hero__spline-canvas {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -60px;
     z-index: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 60px);
     opacity: 0;
     transition: opacity 1s ease;
     pointer-events: auto;
 }
 .hero__spline-canvas.loaded {
     opacity: 1;
+    /* Shift orange/blue toward green palette */
+    filter: hue-rotate(90deg) saturate(0.85) brightness(0.9);
 }
+
+/* Hide Spline "Built with Spline" watermark */
+.hero a[href*="spline"],
+.hero [id="hero-spline"] ~ a,
+.hero > a:last-of-type,
+.hero > div:not(.hero__greeting):not(.hero__center-wrap):not(.hero__bottom-left):not(.hero__bottom-right):not(.hero__scroll-indicator):not(.hero__spline-loader) > a[href*="spline"],
+.hero canvas ~ div:not(.hero__spline-loader):not(.hero__greeting):not(.hero__center-wrap):not(.hero__bottom-left):not(.hero__bottom-right):not(.hero__scroll-indicator) a {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0) !important;
+}
+
+
 /* Spline Loader */
 .hero__spline-loader {
     position: absolute;
@@ -348,34 +372,54 @@ a {
     display: none;
 }
 
-/* Bottom-left — Year */
+/* Bottom-right — CTA Button (covers Spline watermark) */
 .hero__bottom-left {
     position: absolute;
-    bottom: 40px;
-    left: clamp(30px, 5vw, 80px);
-    z-index: 3;
+    bottom: 16px;
+    right: 14px;
+    left: auto;
+    z-index: 6;
 }
-.hero__year {
+.hero__cta-btn {
+    display: inline-block;
+    font-family: var(--ff-heading);
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #0a0a0a;
+    background: var(--accent);
+    padding: 14px 36px 14px 52px;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: all 0.4s var(--ease);
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(74, 222, 128, 0.3);
+}
+.hero__cta-btn:hover {
+    background: #5ceba0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74, 222, 128, 0.45);
+    color: #0a0a0a;
 }
 
-/* Bottom-right — Description */
+/* Bottom-right — Description (shifted further right) */
 .hero__bottom-right {
     position: absolute;
-    bottom: 40px;
-    right: clamp(30px, 5vw, 80px);
+    bottom: 100px;
+    right: 20px;
     z-index: 3;
-    max-width: 340px;
-    text-align: left;
+    max-width: 300px;
+    text-align: right;
 }
 .hero__desc-accent {
     width: 150px;
     max-width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent), rgba(10, 10, 14, 0));
+    background: linear-gradient(90deg, rgba(10, 10, 14, 0), var(--accent));
     margin-bottom: 14px;
+    margin-left: auto;
     border-radius: 2px;
     box-shadow: 0 0 8px rgba(74, 222, 128, 0.2);
 }
@@ -542,6 +586,38 @@ a {
 .about__grid {
     display: grid;
     gap: 60px;
+}
+/* Intro row: text + portrait side by side */
+.about__intro-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.about__intro-row .about__text {
+    flex: 1;
+    min-width: 0;
+}
+.about__portrait {
+    flex-shrink: 0;
+    width: 260px;
+    height: 340px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+.about__portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+    filter: grayscale(0.1) brightness(0.95);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+.about__portrait:hover .about__portrait-img {
+    filter: grayscale(0) brightness(1);
+    transform: scale(1.03);
 }
 .about__intro {
     font-size: 1.15rem;
@@ -1685,15 +1761,33 @@ a {
         position: relative;
         z-index: 4;
     }
-    .hero__bottom-left,
+    .hero__bottom-left {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
     .hero__bottom-right {
         position: relative;
         bottom: auto;
-        left: auto;
         right: auto;
         padding: 0 20px;
         max-width: 100%;
+        text-align: left;
         margin-top: 20px;
+    }
+    .hero__desc-accent {
+        margin-left: 0;
+        background: linear-gradient(90deg, var(--accent), rgba(10, 10, 14, 0));
+    }
+    /* About portrait responsive */
+    .about__intro-row {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .about__portrait {
+        width: 200px;
+        height: 260px;
+        align-self: flex-start;
     }
     .hero__scroll-indicator {
         display: flex;

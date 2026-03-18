@@ -55,9 +55,9 @@
             </h1>
         </div>
 
-        <!-- Bottom-left: Year -->
+        <!-- Bottom-right: CTA Button (covers Spline watermark) -->
         <div class="hero__bottom-left">
-            <p class="hero__year">©2026</p>
+            <a href="#case-studies" class="hero__cta-btn" data-vi="Xem dự án" data-en="View My Work">View My Work</a>
         </div>
 
         <!-- Bottom-right: Description -->
@@ -113,15 +113,20 @@
                 data-html="1">Nơi content, văn hoá, <span
                     style="color: #AAAAAA; font-weight: 600; font-style: italic;">data & công nghệ</span> gặp nhau</h3>
             <div class="about__grid">
-                <div class="about__text">
-                    <p class="about__intro"
-                        data-vi="Marketing creative với kinh nghiệm thực tế xây dựng sự hiện diện số cho các thương hiệu entertainment toàn cầu. Kết hợp <strong>chiến lược dựa trên data</strong> với <strong>creative storytelling</strong>, <strong>sản xuất hình ảnh</strong>, và <strong>công nghệ mới nhất</strong> để xây dựng cộng đồng, thúc đẩy tương tác, và mang lại kết quả đo lường được."
-                        data-en="Marketing creative with hands-on experience shaping digital presence for global entertainment brands. I blend <strong>data-driven strategy</strong> with <strong>creative storytelling</strong>, <strong>visual work</strong>, and the <strong>latest tech tools</strong> to build communities, drive engagement, and deliver measurable results."
-                        data-html="1">Marketing creative với kinh nghiệm thực tế xây dựng sự hiện diện số cho các thương
-                        hiệu entertainment toàn cầu. Kết hợp <strong>chiến lược dựa trên data</strong> với
-                        <strong>creative storytelling</strong>, <strong>sản xuất hình ảnh</strong>, và <strong>công nghệ
-                            mới nhất</strong> để xây dựng cộng đồng, thúc đẩy tương tác, và mang lại kết quả đo lường
-                        được.</p>
+                <div class="about__intro-row">
+                    <div class="about__text">
+                        <p class="about__intro"
+                            data-vi="Marketing creative với kinh nghiệm thực tế xây dựng sự hiện diện số cho các thương hiệu entertainment toàn cầu. Kết hợp <strong>chiến lược dựa trên data</strong> với <strong>creative storytelling</strong>, <strong>sản xuất hình ảnh</strong>, và <strong>công nghệ mới nhất</strong> để xây dựng cộng đồng, thúc đẩy tương tác, và mang lại kết quả đo lường được."
+                            data-en="Marketing creative with hands-on experience shaping digital presence for global entertainment brands. I blend <strong>data-driven strategy</strong> with <strong>creative storytelling</strong>, <strong>visual work</strong>, and the <strong>latest tech tools</strong> to build communities, drive engagement, and deliver measurable results."
+                            data-html="1">Marketing creative với kinh nghiệm thực tế xây dựng sự hiện diện số cho các thương
+                            hiệu entertainment toàn cầu. Kết hợp <strong>chiến lược dựa trên data</strong> với
+                            <strong>creative storytelling</strong>, <strong>sản xuất hình ảnh</strong>, và <strong>công nghệ
+                                mới nhất</strong> để xây dựng cộng đồng, thúc đẩy tương tác, và mang lại kết quả đo lường
+                            được.</p>
+                    </div>
+                    <div class="about__portrait">
+                        <img src="assets/images/about-portrait.jpeg" alt="Phat Nguyen" class="about__portrait-img">
+                    </div>
                 </div>
                 <div class="about__pillars about__pillars--row">
                     <div class="pillar pillar--compact">
@@ -578,6 +583,35 @@
                         setTimeout(() => { loader.style.display = 'none'; }, 500);
                     }
                     canvas.classList.add('loaded');
+
+                    // Remove "Built with Spline" watermark — aggressive approach
+                    function removeSplineWatermark() {
+                        // Search entire document for Spline watermark
+                        document.querySelectorAll('a').forEach(el => {
+                            if (el.href && el.href.toLowerCase().includes('spline')) {
+                                el.remove();
+                            }
+                        });
+                        // Find by text content
+                        document.querySelectorAll('div, span, a').forEach(el => {
+                            if (el.textContent && el.textContent.includes('Built with Spline') && el.closest('#hero')) {
+                                el.remove();
+                            }
+                        });
+                        // Find logo image from Spline
+                        document.querySelectorAll('img[src*="spline"], svg').forEach(el => {
+                            const parent = el.closest('a, div');
+                            if (parent && parent.closest('#hero') && 
+                                !parent.closest('.hero__greeting, .hero__center-wrap, .hero__bottom-left, .hero__bottom-right, .hero__scroll-indicator, .hero__spline-loader')) {
+                                parent.remove();
+                            }
+                        });
+                    }
+                    // Run immediately and observe for late injection
+                    removeSplineWatermark();
+                    const obs = new MutationObserver(removeSplineWatermark);
+                    obs.observe(document.body, { childList: true, subtree: true });
+                    setTimeout(() => obs.disconnect(), 15000);
                 })
                 .catch((err) => {
                     console.warn('Spline load error:', err);
