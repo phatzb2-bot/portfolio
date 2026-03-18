@@ -1,0 +1,46 @@
+{
+  "name": "projects/5029532794414929733",
+  "projectId": "5029532794414929733",
+  "title": "Phat.N Portfolio — Design Refinement",
+  "visibility": "PRIVATE",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "deviceType": "DESKTOP",
+  "screens": {
+    "hero": {
+      "id": "4a3954c67ecf47ea99189c3d2c0e2f91",
+      "sourceScreen": "projects/5029532794414929733/screens/4a3954c67ecf47ea99189c3d2c0e2f91",
+      "width": 2560,
+      "height": 2048,
+      "title": "Nguyen Huy Phat Portfolio - Hero Section"
+    },
+    "about-pillars": {
+      "id": "7269f4e5dcea43419bf81dcfa7a1fc6a",
+      "sourceScreen": "projects/5029532794414929733/screens/7269f4e5dcea43419bf81dcfa7a1fc6a",
+      "width": 2560,
+      "height": 2282,
+      "title": "Portfolio - About & Core Pillars"
+    },
+    "projects": {
+      "id": "c50197e843d248e98bf7f4162eb0d111",
+      "sourceScreen": "projects/5029532794414929733/screens/c50197e843d248e98bf7f4162eb0d111",
+      "width": 2560,
+      "height": 3528,
+      "title": "Featured Projects Showcase"
+    },
+    "services": {
+      "id": "a9c700ce719b48ddac0fdd5a05a45143",
+      "sourceScreen": "projects/5029532794414929733/screens/a9c700ce719b48ddac0fdd5a05a45143",
+      "width": 2560,
+      "height": 2048,
+      "title": "Portfolio - Services & Capabilities"
+    },
+    "timeline-skills-cta": {
+      "id": "4da3fb8121e74cbabea8f44e0f8fd995",
+      "sourceScreen": "projects/5029532794414929733/screens/4da3fb8121e74cbabea8f44e0f8fd995",
+      "width": 2560,
+      "height": 10668,
+      "title": "Career Journey & Skills Showcase"
+    }
+  }
+}

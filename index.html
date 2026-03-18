@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Huy Phat — All-Round Marketing Creative</title>
+    <meta name="description"
+        content="Portfolio of Nguyen Huy Phat — All-round marketer blending content, visual work, data, and tech.">
+    <meta property="og:title" content="Nguyen Huy Phat — Marketing Creative">
+    <meta property="og:description" content="Content × Visual × Data × Tech.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav__logo">phat.n</a>
+        <div class="nav__links">
+            <a href="#about" class="nav__link">About</a>
+            <a href="#case-studies" class="nav__link">Work</a>
+            <a href="#experience" class="nav__link">Experience</a>
+            <a href="#skills" class="nav__link">Skills</a>
+            <a href="#contact" class="nav__link">Contact</a>
+        </div>
+        <button class="nav__lang" onclick="toggleLang()" title="Switch to English">EN</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+
+        <!-- Top-left: Greeting -->
+        <div class="hero__greeting">
+            <p class="hero__greeting-text" data-vi="Xin chào, chào mừng đến với portfolio của mình"
+                data-en="Hi, welcome to my portfolio">Hi, welcome to my portfolio</p>
+        </div>
+
+        <!-- Center: Name -->
+        <div class="hero__center-wrap">
+            <h1 class="hero__title-massive" aria-label="PHAT NGUYEN">
+                <span class="hero__title-line">PHAT NGUYEN</span>
+            </h1>
+        </div>
+
+        <!-- Portrait: bottom center, rising up -->
+        <div class="hero__portrait">
+            <div class="hero__portrait-wrapper">
+                <img src="assets/images/hero-portrait-v6.png" alt="Nguyen Huy Phat" class="hero__portrait-img">
+                <div class="hero__portrait-glow"></div>
+            </div>
+        </div>
+
+        <!-- Bottom-left: Year -->
+        <div class="hero__bottom-left">
+            <p class="hero__year">©2026</p>
+        </div>
+
+        <!-- Bottom-right: Description -->
+        <div class="hero__bottom-right">
+            <div class="hero__desc-accent"></div>
+            <p class="hero__desc"
+                data-vi="Một all-round marketer kết hợp content sáng tạo, thiết kế hình ảnh, phân tích data và ứng dụng công nghệ."
+                data-en="All-round marketer blending creative content, visual design, data analytics and technology.">
+                All-round marketer blending creative content, visual design, data analytics and technology.</p>
+        </div>
+
+        <!-- Right: Scroll indicator (vertical) -->
+        <div class="hero__scroll-indicator">
+            <span data-vi="CUỘN" data-en="SCROLL">SCROLL</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Brand Logo Slider -->
+    <div class="brand-slider">
+        <div class="brand-slider__track">
+            <div class="brand-slider__item brand-slider__item--lg"><img src="assets/images/brands/billboard-vietnam.png"
+                    alt="Billboard Vietnam"></div>
+            <div class="brand-slider__item"><img src="assets/images/brands/warner-music-white.png"
+                    alt="Warner Music Vietnam"></div>
+            <div class="brand-slider__item"><img src="assets/images/brands/datvietvac.png" alt="DatVietVAC"></div>
+            <div class="brand-slider__item"><img src="assets/images/brands/jbl.png" alt="JBL"></div>
+            <div class="brand-slider__item brand-slider__item--xl"><img src="assets/images/brands/harman-kardon.png"
+                    alt="Harman Kardon"></div>
+            <div class="brand-slider__item brand-slider__item--lg"><img src="assets/images/brands/wee-clo.png"
+                    alt="Ware With Wee"></div>
+            <!-- duplicate set for infinite scroll -->
+            <div class="brand-slider__item brand-slider__item--lg"><img src="assets/images/brands/billboard-vietnam.png"
+                    alt="Billboard Vietnam"></div>
+            <div class="brand-slider__item"><img src="assets/images/brands/warner-music-white.png"
+                    alt="Warner Music Vietnam"></div>
+            <div class="brand-slider__item"><img src="assets/images/brands/datvietvac.png" alt="DatVietVAC"></div>
+            <div class="brand-slider__item"><img src="assets/images/brands/jbl.png" alt="JBL"></div>
+            <div class="brand-slider__item brand-slider__item--xl"><img src="assets/images/brands/harman-kardon.png"
+                    alt="Harman Kardon"></div>
+            <div class="brand-slider__item brand-slider__item--lg"><img src="assets/images/brands/wee-clo.png"
+                    alt="Ware With Wee"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section__label" data-vi="Về tôi" data-en="About Me">Về tôi</h2>
+            <h3 class="section__title"
+                data-vi="Nơi content, văn hoá, <span style='color: #AAAAAA; font-weight: 600; font-style: italic;'>data & công nghệ</span> gặp nhau"
+                data-en="Where content, culture, <span style='color: #AAAAAA; font-weight: 600; font-style: italic;'>data & tech</span> meet"
+                data-html="1">Nơi content, văn hoá, <span
+                    style="color: #AAAAAA; font-weight: 600; font-style: italic;">data & công nghệ</span> gặp nhau</h3>
+            <div class="about__grid">
+                <div class="about__text">
+                    <p class="about__intro"
+                        data-vi="Marketing creative với kinh nghiệm thực tế xây dựng sự hiện diện số cho các thương hiệu entertainment toàn cầu. Kết hợp <strong>chiến lược dựa trên data</strong> với <strong>creative storytelling</strong>, <strong>sản xuất hình ảnh</strong>, và <strong>công nghệ mới nhất</strong> để xây dựng cộng đồng, thúc đẩy tương tác, và mang lại kết quả đo lường được."
+                        data-en="Marketing creative with hands-on experience shaping digital presence for global entertainment brands. I blend <strong>data-driven strategy</strong> with <strong>creative storytelling</strong>, <strong>visual work</strong>, and the <strong>latest tech tools</strong> to build communities, drive engagement, and deliver measurable results."
+                        data-html="1">Marketing creative với kinh nghiệm thực tế xây dựng sự hiện diện số cho các thương
+                        hiệu entertainment toàn cầu. Kết hợp <strong>chiến lược dựa trên data</strong> với
+                        <strong>creative storytelling</strong>, <strong>sản xuất hình ảnh</strong>, và <strong>công nghệ
+                            mới nhất</strong> để xây dựng cộng đồng, thúc đẩy tương tác, và mang lại kết quả đo lường
+                        được.</p>
+                </div>
+                <div class="about__pillars about__pillars--row">
+                    <div class="pillar pillar--compact">
+                        <div class="pillar__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00e39f"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10 9 9 9 8 9" />
+                            </svg>
+                        </div>
+                        <h4 class="pillar__title">Creative<br>Storytelling</h4>
+                        <p class="pillar__desc"
+                            data-vi="Biến brief phức tạp thành câu chuyện hấp dẫn cho Gen Z &amp; Millennials"
+                            data-en="Transforming complex briefs into compelling stories for Gen Z &amp; Millennials">
+                            Biến brief phức tạp thành câu chuyện hấp dẫn cho Gen Z & Millennials</p>
+                    </div>
+                    <div class="pillar pillar--compact">
+                        <div class="pillar__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00e39f"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="16" />
+                                <line x1="8" y1="12" x2="16" y2="12" />
+                            </svg>
+                        </div>
+                        <h4 class="pillar__title">Visual<br>Work</h4>
+                        <p class="pillar__desc"
+                            data-vi="Chỉnh sửa nội dung, nhiếp ảnh, và tạo nhận diện hình ảnh cho thương hiệu"
+                            data-en="Content editing, photography, and visual identity creation for brands">Chỉnh sửa
+                            nội dung, nhiếp ảnh, và tạo nhận diện hình ảnh cho thương hiệu</p>
+                    </div>
+                    <div class="pillar pillar--compact">
+                        <div class="pillar__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00e39f"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                        </div>
+                        <h4 class="pillar__title">Data-<br>Driven</h4>
+                        <p class="pillar__desc"
+                            data-vi="Mọi quyết định đều dựa trên data — từ tối ưu quảng cáo đến lập kế hoạch nội dung"
+                            data-en="Every decision backed by data — from ads optimization to content planning">Mọi
+                            quyết định đều dựa trên data — từ tối ưu quảng cáo đến lập kế hoạch nội dung</p>
+                    </div>
+                    <div class="pillar pillar--compact">
+                        <div class="pillar__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00e39f"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                <line x1="12" y1="22.08" x2="12" y2="12" />
+                            </svg>
+                        </div>
+                        <h4 class="pillar__title">Tech &<br>AI</h4>
+                        <p class="pillar__desc"
+                            data-vi="Tận dụng công cụ AI, tự động hoá, và nền tảng no-code để làm việc thông minh và nhanh hơn"
+                            data-en="Leveraging AI tools, automation, and no-code platforms to work smarter and faster">
+                            Tận dụng công cụ AI, tự động hoá, và nền tảng no-code để làm việc thông minh và nhanh hơn
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Showcase -->
+    <section class="section showcase" id="case-studies">
+        <div class="container">
+            <h2 class="section__label" data-vi="Dự án tiêu biểu" data-en="Selected Work">Dự án tiêu biểu</h2>
+            <h3 class="section__title" data-vi="Các dự án nổi bật" data-en="Featured Projects">Các dự án nổi bật</h3>
+            <div class="showcase__grid">
+                <!-- Billboard Vietnam -->
+                <a href="billboard-vietnam.html" class="project-card project-card--large" id="project-billboard">
+                    <div class="project-card__image">
+                        <img src="assets/images/bbvn/header.jpg" alt="Billboard Vietnam">
+                        <div class="project-card__overlay"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <span class="project-card__tag">Social Media Rebrand</span>
+                        <h4 class="project-card__title">Billboard Vietnam</h4>
+                        <p class="project-card__desc"
+                            data-vi="Tái ra mắt toàn diện hệ thống social media, đạt 4.5M+ lượt tiếp cận hàng tháng và tăng trưởng 20K+ followers trong 6 tháng."
+                            data-en="Complete social media relaunch reaching 4.5M+ monthly users and growing 20K+ followers in 6 months.">
+                            Tái ra mắt toàn diện hệ thống social media, đạt 4.5M+ lượt tiếp cận hàng tháng và tăng
+                            trưởng 20K+ followers trong 6 tháng.</p>
+                        <span class="project-card__cta"
+                            style="color: #00e68a; font-weight: 600; font-size: 0.9rem; margin-top: 8px; display: inline-block;"
+                            data-vi="Xem chi tiết →" data-en="View Details →">Xem chi tiết →</span>
+                    </div>
+                </a>
+                <!-- Warner Music -->
+                <a href="warner-music.html" class="project-card" id="project-warner">
+                    <div class="project-card__image">
+                        <img src="assets/images/warner/header_warner.jpg" alt="Warner Music Vietnam"
+                            style="object-position: center 70%;">
+                        <div class="project-card__overlay"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <span class="project-card__tag">Digital Marketing</span>
+                        <h4 class="project-card__title">Warner Music Vietnam</h4>
+                        <p class="project-card__desc"
+                            data-vi="Tăng trưởng engagement 5x qua chiến lược nội dung và quảng cáo."
+                            data-en="5x engagement uplift through strategic content and paid campaigns.">Tăng trưởng
+                            engagement 5x qua chiến lược nội dung và quảng cáo.</p>
+                        <span class="project-card__cta"
+                            style="color: #00e68a; font-weight: 600; font-size: 0.9rem; margin-top: 8px; display: inline-block;"
+                            data-vi="Xem chi tiết →" data-en="View Details →">Xem chi tiết →</span>
+                    </div>
+                </a>
+                <!-- Harman -->
+                <a href="harman-vietnam.html" class="project-card" id="project-harman">
+                    <div class="project-card__image">
+                        <img src="assets/images/harman/harman_header.jpg" alt="Harman Vietnam">
+                        <div class="project-card__overlay"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <span class="project-card__tag">Community Building</span>
+                        <h4 class="project-card__title">Harman Vietnam</h4>
+                        <p class="project-card__desc"
+                            data-vi="Xây dựng cộng đồng thương hiệu công nghệ cho JBL &amp; Harman Kardon tại Việt Nam."
+                            data-en="Building tech brand community for JBL &amp; Harman Kardon in Vietnam.">Xây dựng
+                            cộng đồng thương hiệu công nghệ cho JBL & Harman Kardon tại Việt Nam.</p>
+                        <span class="project-card__cta"
+                            style="color: #00e68a; font-weight: 600; font-size: 0.9rem; margin-top: 8px; display: inline-block;"
+                            data-vi="Xem chi tiết →" data-en="View Details →">Xem chi tiết →</span>
+                    </div>
+                </a>
+                <!-- Ware With Wee -->
+                <a href="wee-clo.html" class="project-card" id="project-wee">
+                    <div class="project-card__image">
+                        <img src="assets/images/wee/wee_header.jpg" alt="Ware With Wee">
+                        <div class="project-card__overlay"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <span class="project-card__tag">Entrepreneurship</span>
+                        <h4 class="project-card__title">Ware With Wee</h4>
+                        <p class="project-card__desc"
+                            data-vi="Sáng lập và xây dựng thương hiệu từ đầu — social, e-commerce và nhận diện."
+                            data-en="Founded and built brand from scratch — social, e-commerce, and identity.">Sáng lập
+                            và xây dựng thương hiệu từ đầu — social, e-commerce và nhận diện.</p>
+                        <span class="project-card__cta"
+                            style="color: #00e68a; font-weight: 600; font-size: 0.9rem; margin-top: 8px; display: inline-block;"
+                            data-vi="Xem chi tiết →" data-en="View Details →">Xem chi tiết →</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services / What I Do -->
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section__label" data-vi="Dịch vụ" data-en="What I Do">Dịch vụ</h2>
+            <h3 class="section__title" data-vi="Dịch vụ truyền thông số<br>toàn diện"
+                data-en="End-to-End Digital<br>Communications Services" data-html="1">Dịch vụ truyền thông số<br>toàn
+                diện</h3>
+            <div class="services__grid">
+                <div class="service-card">
+                    <span class="service-card__number">01</span>
+                    <h4 class="service-card__title" data-vi="Chiến lược Social Media" data-en="Social Media Strategy">
+                        Chiến lược Social Media</h4>
+                    <p class="service-card__desc"
+                        data-vi="Lập kế hoạch, triển khai và tối ưu đa nền tảng. Từ lịch nội dung đến phân tích hiệu suất — thúc đẩy tăng trưởng đo lường được."
+                        data-en="Multi-platform planning, execution, and optimization. From content calendars to performance analytics — driving measurable growth across channels.">
+                        Lập kế hoạch, triển khai và tối ưu đa nền tảng. Từ lịch nội dung đến phân tích hiệu suất — thúc
+                        đẩy tăng trưởng đo lường được.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-card__number">02</span>
+                    <h4 class="service-card__title" data-vi="Sản xuất nội dung &amp; Copywriting"
+                        data-en="Content Creation &amp; Copywriting">Sản xuất nội dung & Copywriting</h4>
+                    <p class="service-card__desc"
+                        data-vi="Storytelling song ngữ (VN/EN) chạm được đến khán giả Gen Z. Từ nội dung ngắn trên social đến bài viết chuyên sâu dài."
+                        data-en="Bilingual storytelling (VN/EN) that resonates with Gen Z audiences. From short-form social to long-form editorial features.">
+                        Storytelling song ngữ (VN/EN) chạm được đến khán giả Gen Z. Từ nội dung ngắn trên social đến bài
+                        viết chuyên sâu dài.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-card__number">03</span>
+                    <h4 class="service-card__title" data-vi="Quảng cáo trả phí" data-en="Paid Advertising">Quảng cáo trả
+                        phí</h4>
+                    <p class="service-card__desc"
+                        data-vi="Quản lý chiến dịch Meta &amp; TikTok với A/B testing, tối ưu đối tượng, và theo dõi chuyển đổi. YouTube SEO và tuyển chọn playlist Spotify."
+                        data-en="Meta &amp; TikTok campaign management with A/B testing, audience optimization, and conversion tracking. YouTube SEO and Spotify playlist curation.">
+                        Quản lý chiến dịch Meta & TikTok với A/B testing, tối ưu đối tượng, và theo dõi chuyển đổi.
+                        YouTube SEO và tuyển chọn playlist Spotify.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-card__number">04</span>
+                    <h4 class="service-card__title" data-vi="Marketing sự kiện &amp; Đối tác"
+                        data-en="Event &amp; Partnership Marketing">Marketing sự kiện & Đối tác</h4>
+                    <p class="service-card__desc"
+                        data-vi="Phễu marketing sự kiện toàn diện — từ buổi nghe nhạc thân mật 300 người đến concert 10K+ khán giả. Phát triển và triển khai đối tác chiến lược."
+                        data-en="End-to-end event marketing funnel — from intimate 300-person listening sessions to 10K+ concerts. Strategic partnership development and execution.">
+                        Phễu marketing sự kiện toàn diện — từ buổi nghe nhạc thân mật 300 người đến concert 10K+ khán
+                        giả. Phát triển và triển khai đối tác chiến lược.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-card__number">05</span>
+                    <h4 class="service-card__title" data-vi="Phát triển thương hiệu" data-en="Brand Development">Phát
+                        triển thương hiệu</h4>
+                    <p class="service-card__desc"
+                        data-vi="Tạo nhận diện hình ảnh, điều chỉnh brand guidelines, và chiến lược bản địa hoá cho thương hiệu quốc tế mở rộng thị trường mới."
+                        data-en="Visual identity creation, brand guidelines adaptation, and localization strategy for global brands entering new markets.">
+                        Tạo nhận diện hình ảnh, điều chỉnh brand guidelines, và chiến lược bản địa hoá cho thương hiệu
+                        quốc tế mở rộng thị trường mới.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-card__number">06</span>
+                    <h4 class="service-card__title" data-vi="Quản lý cộng đồng" data-en="Community Management">Quản lý
+                        cộng đồng</h4>
+                    <p class="service-card__desc"
+                        data-vi="Xây dựng và nuôi dưỡng cộng đồng qua chiến lược tương tác, seeding nội dung, và hợp tác fandom."
+                        data-en="Building and nurturing communities through engagement strategies, content seeding, and fandom collaboration.">
+                        Xây dựng và nuôi dưỡng cộng đồng qua chiến lược tương tác, seeding nội dung, và hợp tác fandom.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline (updated from CV) -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section__label" data-vi="Hành trình sự nghiệp" data-en="Career Journey">Hành trình sự nghiệp</h2>
+            <h3 class="section__title" data-vi="Lịch sử công việc" data-en="Experience Timeline">Lịch sử công việc</h3>
+            <div class="timeline">
+                <div class="timeline__item timeline__item--active">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">May – Oct 2025</span>
+                        <h4 class="timeline__role">Marketing Communications Executive</h4>
+                        <h5 class="timeline__company">Billboard Vietnam</h5>
+                        <ul class="timeline__details">
+                            <li data-vi="<strong>Phát triển chiến lược truyền thông:</strong> Bản địa hoá và làm mới brand guidelines quốc tế để xây dựng định hướng nội dung chính và nhận diện hình ảnh cho Billboard Vietnam tại thị trường Việt."
+                                data-en="<strong>Communication Strategy Development:</strong> Localized and refreshed international brand guidelines to establish Billboard Vietnam's main content directions and visual identity for the local market."
+                                data-html="1"><strong>Phát triển chiến lược truyền thông:</strong> Bản địa hoá và làm
+                                mới brand guidelines quốc tế để xây dựng định hướng nội dung chính và nhận diện hình ảnh
+                                cho Billboard Vietnam tại thị trường Việt.</li>
+                            <li data-vi="<strong>Tăng trưởng Social Media:</strong> Triển khai tái ra mắt các kênh social Billboard Vietnam, tăng trưởng gần <strong>20K followers</strong>; đạt <strong>4.5M tổng lượt tiếp cận</strong> và <strong>200K tương tác hàng tháng</strong> trên 4 nền tảng chính."
+                                data-en="<strong>Social Media Growth:</strong> Established the relaunch of Billboard Vietnam's social channels, expanding by nearly <strong>20K followers</strong>; achieved <strong>4.5M total reach</strong> and <strong>200K monthly interactions</strong> across 4 main platforms."
+                                data-html="1"><strong>Tăng trưởng Social Media:</strong> Triển khai tái ra mắt các kênh
+                                social Billboard Vietnam, tăng trưởng gần <strong>20K followers</strong>; đạt
+                                <strong>4.5M tổng lượt tiếp cận</strong> và <strong>200K tương tác hàng tháng</strong>
+                                trên 4 nền tảng chính.</li>
+                            <li data-vi="<strong>Quản lý đối tác:</strong> Phối hợp với các hãng thu âm lớn và team nghệ sĩ để có được câu chuyện độc quyền, phối hợp đưa tin truyền thông, và khuếch đại sự hiện diện thương hiệu qua các sự kiện lớn như Billboard Vietnam Official Launch, 8Wonder Summer 2025, và Em Xinh &quot;Say Hi&quot; Concert 2025."
+                                data-en="<strong>Partner Management:</strong> Collaborated with major labels and artist teams to obtain exclusive stories, coordinate media features, and amplify brand presence through major events like Billboard Vietnam Official Launch, 8Wonder Summer 2025, and Em Xinh &quot;Say Hi&quot; Concert 2025."
+                                data-html="1"><strong>Quản lý đối tác:</strong> Phối hợp với các hãng thu âm lớn và team
+                                nghệ sĩ để có được câu chuyện độc quyền, phối hợp đưa tin truyền thông, và khuếch đại sự
+                                hiện diện thương hiệu qua các sự kiện lớn như Billboard Vietnam Official Launch, 8Wonder
+                                Summer 2025, và Em Xinh "Say Hi" Concert 2025.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Aug 2023 – Mar 2025</span>
+                        <h4 class="timeline__role">Digital Marketing Collaborator</h4>
+                        <h5 class="timeline__company">Warner Music Vietnam</h5>
+                        <ul class="timeline__details">
+                            <li data-vi="<strong>Chiến lược &amp; Triển khai Social Media:</strong> Phát triển và thực thi chiến lược nội dung cho các kênh của WMV và đối tác entertainment lớn (Anh Trai &quot;Say Hi&quot;, Rap Viet 2025), đạt <strong>tăng trưởng tổng 5x</strong> về lượt tiếp cận và tương tác so với mức trung bình trước đó trong hạng mục nhạc quốc tế."
+                                data-en="<strong>Social Media Strategy &amp; Execution:</strong> Developed and executed content strategies for WMV's owned channels and major entertainment partners (Anh Trai &quot;Say Hi&quot;, Rap Viet 2025), driving a <strong>5x total uplift</strong> in reach and engagement vs. baseline average in the international music category."
+                                data-html="1"><strong>Chiến lược & Triển khai Social Media:</strong> Phát triển và thực
+                                thi chiến lược nội dung cho các kênh của WMV và đối tác entertainment lớn (Anh Trai "Say
+                                Hi", Rap Viet 2025), đạt <strong>tăng trưởng tổng 5x</strong> về lượt tiếp cận và tương
+                                tác so với mức trung bình trước đó trong hạng mục nhạc quốc tế.</li>
+                            <li data-vi="<strong>Quảng cáo &amp; SEO:</strong> Dẫn dắt chiến dịch quảng cáo Meta &amp; TikTok, tối ưu lượt tiếp cận và click cho nhóm khán giả mục tiêu. Thúc đẩy kênh YouTube và Spotify của WMV qua SEO chiến lược và curated playlists — đưa video hoạt động tốt nhất đạt gần <strong>1M lượt xem</strong> và <strong>3,000 lượt lưu</strong> trên Spotify."
+                                data-en="<strong>Paid Ads &amp; SEO:</strong> Led Meta &amp; TikTok ad campaigns, optimizing reach and clicks for targeted audiences. Boosted WMV's YouTube and Spotify channel through strategic SEO and curated playlists — driving the highest-performing video to nearly <strong>1M views</strong> and securing <strong>3,000 saves</strong> on Spotify playlists."
+                                data-html="1"><strong>Quảng cáo & SEO:</strong> Dẫn dắt chiến dịch quảng cáo Meta &
+                                TikTok, tối ưu lượt tiếp cận và click cho nhóm khán giả mục tiêu. Thúc đẩy kênh YouTube
+                                và Spotify của WMV qua SEO chiến lược và curated playlists — đưa video hoạt động tốt
+                                nhất đạt gần <strong>1M lượt xem</strong> và <strong>3,000 lượt lưu</strong> trên
+                                Spotify.</li>
+                            <li data-vi="<strong>Chuyển đổi sự kiện:</strong> Thu hút <strong>300+ người tham dự</strong> cho các buổi nghe nhạc thân mật (Charli XCX, Linkin Park) và <strong>10K+ khán giả</strong> cho sự kiện quy mô lớn (Vũ. 2nd Album Concert) qua tích hợp toàn phễu marketing."
+                                data-en="<strong>On-site Event Conversion:</strong> Drove <strong>300+ attendees</strong> for intimate listening sessions (Charli XCX, Linkin Park album launches) and <strong>10K+ attendees</strong> for large-scale events (Vũ.'s 2nd album concert) through end-to-end marketing funnel integration."
+                                data-html="1"><strong>Chuyển đổi sự kiện:</strong> Thu hút <strong>300+ người tham
+                                    dự</strong> cho các buổi nghe nhạc thân mật (Charli XCX, Linkin Park) và
+                                <strong>10K+ khán giả</strong> cho sự kiện quy mô lớn (Vũ. 2nd Album Concert) qua tích
+                                hợp toàn phễu marketing.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Oct 2022 – Jul 2023</span>
+                        <h4 class="timeline__role">Digital Marketing Collaborator</h4>
+                        <h5 class="timeline__company">Harman Vietnam (JBL & Harman Kardon)</h5>
+                        <ul class="timeline__details">
+                            <li data-vi="<strong>Nghiên cứu thị trường &amp; Hỗ trợ chiến lược nội dung:</strong> Chuẩn bị báo cáo về các nền tảng social, nhóm cộng đồng, và đối thủ để hỗ trợ lập kế hoạch nội dung cho chiến dịch JBL và Harman Kardon Vietnam."
+                                data-en="<strong>Market Research &amp; Content Strategy Support:</strong> Prepared reports on social platforms, community groups, and competitors to support content planning for JBL and Harman Kardon Vietnam campaigns."
+                                data-html="1"><strong>Nghiên cứu thị trường & Hỗ trợ chiến lược nội dung:</strong> Chuẩn
+                                bị báo cáo về các nền tảng social, nhóm cộng đồng, và đối thủ để hỗ trợ lập kế hoạch nội
+                                dung cho chiến dịch JBL và Harman Kardon Vietnam.</li>
+                            <li data-vi="<strong>Quản lý cộng đồng &amp; Seeding nội dung:</strong> Cập nhật thông tin sản phẩm, hỗ trợ quy trình chuyển đổi, và nuôi dưỡng lòng trung thành khách hàng."
+                                data-en="<strong>Community Management &amp; Content Seeding:</strong> Delivered product updates, supported the conversion process, and cultivated customer loyalty."
+                                data-html="1"><strong>Quản lý cộng đồng & Seeding nội dung:</strong> Cập nhật thông tin
+                                sản phẩm, hỗ trợ quy trình chuyển đổi, và nuôi dưỡng lòng trung thành khách hàng.</li>
+                            <li data-vi="<strong>Chăm sóc khách hàng:</strong> Cung cấp thông tin sản phẩm và xử lý vấn đề cho khách hàng trên fanpage và cộng đồng Facebook."
+                                data-en="<strong>Customer Service:</strong> Provided product information and resolved issues for customers on brand pages and Facebook communities."
+                                data-html="1"><strong>Chăm sóc khách hàng:</strong> Cung cấp thông tin sản phẩm và xử lý
+                                vấn đề cho khách hàng trên fanpage và cộng đồng Facebook.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <span class="timeline__date">Apr 2021 – Sep 2022</span>
+                        <h4 class="timeline__role">Founder</h4>
+                        <h5 class="timeline__company">Ware With Wee (Personal Project)</h5>
+                        <ul class="timeline__details">
+                            <li data-vi="<strong>Quản lý Social Media:</strong> Phát triển các kênh social media qua nội dung hấp dẫn, seeding cộng đồng, và chạy quảng cáo."
+                                data-en="<strong>Social Media Management:</strong> Developed social media channels through attractive content, community seeding, and running ads."
+                                data-html="1"><strong>Quản lý Social Media:</strong> Phát triển các kênh social media
+                                qua nội dung hấp dẫn, seeding cộng đồng, và chạy quảng cáo.</li>
+                            <li data-vi="<strong>Vận hành E-commerce &amp; Quản lý nhà cung cấp:</strong> Phối hợp cùng nhà cung cấp, tối ưu bán hàng qua sàn thương mại điện tử và bán trực tiếp."
+                                data-en="<strong>E-commerce Operations &amp; Supplier Management:</strong> Worked with suppliers, optimized selling through e-commerce platforms, direct sell."
+                                data-html="1"><strong>Vận hành E-commerce & Quản lý nhà cung cấp:</strong> Phối hợp cùng
+                                nhà cung cấp, tối ưu bán hàng qua sàn thương mại điện tử và bán trực tiếp.</li>
+                            <li data-vi="<strong>Phát triển thương hiệu:</strong> Xây dựng và nâng cao nhận diện, hình ảnh và sự hiện diện tổng thể của thương hiệu trên thị trường."
+                                data-en="<strong>Brand Development:</strong> Creating and enhancing a brand's identity, image, and overall market presence."
+                                data-html="1"><strong>Phát triển thương hiệu:</strong> Xây dựng và nâng cao nhận diện,
+                                hình ảnh và sự hiện diện tổng thể của thương hiệu trên thị trường.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section__label" data-vi="Bộ công cụ" data-en="Toolkit">Bộ công cụ</h2>
+            <h3 class="section__title" data-vi="Kỹ năng &amp; Công cụ" data-en="Skills &amp; Tools">Kỹ năng & Công cụ
+            </h3>
+            <div class="skills__grid">
+                <div class="skill-group">
+                    <h4 class="skill-group__title" data-vi="Kỹ năng Marketing" data-en="Marketing Skills">Kỹ năng
+                        Marketing</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag--expert">Social Media Strategy</span>
+                        <span class="skill-tag skill-tag--expert">Content Creation</span>
+                        <span class="skill-tag skill-tag--expert">Copywriting (VN/EN)</span>
+                        <span class="skill-tag skill-tag--advanced">Paid Advertising (Meta/TikTok)</span>
+                        <span class="skill-tag skill-tag--advanced">SEO (YouTube/Spotify)</span>
+                        <span class="skill-tag skill-tag--advanced">Event Marketing</span>
+                        <span class="skill-tag skill-tag--advanced">Community Management</span>
+                        <span class="skill-tag skill-tag--advanced">Market Research</span>
+                        <span class="skill-tag skill-tag--advanced">Brand Development</span>
+                        <span class="skill-tag skill-tag--advanced">Stakeholder Management</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group__title" data-vi="Công cụ &amp; Phần mềm" data-en="Tools &amp; Software">Công
+                        cụ & Phần mềm</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Facebook Ads Manager</span>
+                        <span class="skill-tag">Meta Business Suite</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Premiere Pro</span>
+                        <span class="skill-tag">CapCut</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group__title" data-vi="Kỹ năng &amp; Công cụ AI" data-en="AI Skills &amp; Tools">Kỹ
+                        năng & Công cụ AI</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag--ai">Antigravity <small>(Vibe Coding)</small></span>
+                        <span class="skill-tag skill-tag--ai">ComfyUI <small>(AI Image Generation)</small></span>
+                        <span class="skill-tag skill-tag--ai">OpenClaw <small>(AI Agents)</small></span>
+                        <span class="skill-tag skill-tag--ai">n8n <small>(Automation)</small></span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group__title" data-vi="Ngôn ngữ" data-en="Languages">Ngôn ngữ</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag--expert">🇻🇳 Vietnamese (Native)</span>
+                        <span class="skill-tag skill-tag--advanced">🇬🇧 English (Proficient)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta" id="contact">
+        <div class="container">
+            <div class="cta__content">
+                <h2 class="cta__title"
+                    data-vi="SẴN SÀNG ĐƯA Ý TƯỞNG<br>CỦA BẠN LÊN<br><span class=&quot;cta__highlight&quot;>TẦM CAO MỚI?</span>"
+                    data-en="READY TO TAKE YOUR<br>IDEA TO THE<br><span class=&quot;cta__highlight&quot;>NEXT LEVEL?</span>"
+                    data-html="1">SẴN SÀNG ĐƯA Ý TƯỞNG<br>CỦA BẠN LÊN<br><span class="cta__highlight">TẦM CAO
+                        MỚI?</span></h2>
+                <p class="cta__subtitle" data-vi="Hãy cùng tạo nên điều tuyệt vời"
+                    data-en="Let's Create Something Amazing Together">Hãy cùng tạo nên điều tuyệt vời</p>
+                <div class="cta__actions">
+                    <a href="mailto:phatnguyenhuy12@gmail.com" class="btn btn--primary btn--large">
+                        <span>📧</span> <span data-vi="Liên hệ" data-en="Get In Touch">Liên hệ</span>
+                    </a>
+                    <a href="tel:+84973467067" class="btn btn--ghost btn--large">
+                        <span>📱</span> <span data-vi="Gọi cho tôi" data-en="Call Me">Gọi cho tôi</span>
+                    </a>
+                </div>
+                <div class="cta__links">
+                    <a href="mailto:phatnguyenhuy12@gmail.com" class="cta__link">phatnguyenhuy12@gmail.com</a>
+                    <span class="cta__divider">•</span>
+                    <a href="tel:+84973467067" class="cta__link">0973 467 067</a>
+                    <span class="cta__divider">•</span>
+                    <a href="https://www.linkedin.com/in/nguyenhuyphat/" target="_blank" class="cta__link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer__content">
+            <p data-vi="© 2025 Nguyễn Huy Phát. Bản quyền thuộc về tác giả."
+                data-en="© 2025 Nguyen Huy Phat. All rights reserved.">© 2025 Nguyễn Huy Phát. Bản quyền thuộc về tác
+                giả.</p>
+            <div class="footer__links">
+                <a href="mailto:phatnguyenhuy12@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/nguyenhuyphat/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="i18n.js"></script>
+</body>
+
+</html>
