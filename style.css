@@ -252,7 +252,7 @@ a {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 0;
     overflow: hidden;
@@ -267,7 +267,7 @@ a {
 .hero__greeting {
     width: 100%;
     max-width: 90vw;
-    padding-top: clamp(100px, 15vh, 160px);
+    padding-top: 0;
     z-index: 3;
 }
 .hero__greeting-text {
@@ -277,7 +277,7 @@ a {
     color: rgba(255, 255, 255, 0.7);
     font-style: italic;
     line-height: 1.4;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 /* Center Wrap — Name + Portrait */
@@ -306,48 +306,9 @@ a {
     white-space: nowrap;
 }
 
-/* Portrait — Bottom left, rising up */
+/* Portrait — Hidden (removed) */
 .hero__portrait {
-    position: absolute;
-    left: clamp(0px, 2vw, 30px);
-    bottom: -5%;
-    z-index: 2;
-    width: clamp(500px, 55vw, 800px);
-    pointer-events: none;
-}
-.hero__portrait-wrapper {
-    position: relative;
-}
-.hero__portrait-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.85) contrast(1.15) saturate(0.85);
-    mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
-}
-.hero__portrait-glow {
-    position: absolute;
-    top: -25%;
-    left: -25%;
-    right: -25%;
-    bottom: -25%;
-    background: radial-gradient(circle at 50% 45%, rgba(74, 222, 128, 0.25) 0%, rgba(74, 222, 128, 0.08) 40%, transparent 65%);
-    z-index: -1;
-    filter: blur(60px);
-    animation: glowBreath 4s ease-in-out infinite;
-    pointer-events: none;
-}
-@keyframes glowBreath {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
-    50% {
-        transform: scale(1.15);
-        opacity: 1;
-    }
+    display: none;
 }
 
 /* Bottom-left — Year */
@@ -1672,11 +1633,11 @@ a {
 /* ---------- Responsive ---------- */
 @media (max-width: 968px) {
     .hero {
-        padding: 80px 0 0;
+        padding: 0;
     }
     .hero__greeting {
-        top: 90px;
-        left: 20px;
+        top: auto;
+        left: auto;
     }
     .hero__greeting-text {
         font-size: 1rem;
@@ -1685,14 +1646,7 @@ a {
         font-size: clamp(2.5rem, 9vw, 4rem);
         letter-spacing: -1px;
         position: relative;
-        z-index: 4; /* Ensure text is above portrait on mobile */
-    }
-    .hero__portrait {
-        width: 95%;
-        max-width: 480px;
-        left: -5%;
-        bottom: 0;
-        z-index: 2;
+        z-index: 4;
     }
     .hero__bottom-left,
     .hero__bottom-right {
