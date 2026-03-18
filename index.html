@@ -36,6 +36,12 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
 
+        <!-- Spline 3D Background -->
+        <canvas id="hero-spline" class="hero__spline-canvas"></canvas>
+        <div id="hero-spline-loader" class="hero__spline-loader">
+            <div class="hero__spline-spinner"></div>
+        </div>
+
         <!-- Top-left: Greeting -->
         <div class="hero__greeting">
             <p class="hero__greeting-text" data-vi="Xin chào, chào mừng đến với portfolio của mình"
@@ -554,7 +560,32 @@
         </div>
     </footer>
 
-    <script src="lava.js"></script>
+    <!-- Spline 3D Runtime -->
+    <script type="module">
+        import { Application } from 'https://esm.sh/@splinetool/runtime';
+
+        const canvas = document.getElementById('hero-spline');
+        const loader = document.getElementById('hero-spline-loader');
+
+        if (canvas) {
+            const spline = new Application(canvas);
+            spline.load('https://prod.spline.design/F3TNUOOguq03vhC3/scene.splinecode')
+                .then(() => {
+                    console.log('✅ Spline 3D scene loaded');
+                    // Fade out loader, fade in canvas
+                    if (loader) {
+                        loader.style.opacity = '0';
+                        setTimeout(() => { loader.style.display = 'none'; }, 500);
+                    }
+                    canvas.classList.add('loaded');
+                })
+                .catch((err) => {
+                    console.warn('Spline load error:', err);
+                    // Hide loader on error too
+                    if (loader) loader.style.display = 'none';
+                });
+        }
+    </script>
     <script src="script.js"></script>
     <script src="i18n.js"></script>
 </body>
